@@ -23,7 +23,7 @@ const projects = [
     id: 4,
     title: "WeatherDate(RR)",
     description: "A real-time weather forecast application that displays current conditions, temperature, wind, humidity, and a 7-day forecast. Built with React frontend and Node.js + Express API integration.",
-    image: "https://i.postimg.cc/Y01kNg8G/Screenshot-2025-11-25-224841.png",
+    image: "https://i.postimg.cc/MTsJbJhY/Screenshot-2025-11-25-224841.png",
   },
 ];
 
