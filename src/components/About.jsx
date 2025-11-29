@@ -13,7 +13,7 @@ function About() {
           architecture, and building solutions that meet real business needs. I
           work on modern and innovative projects, and I also have several
           real-world projects. Additionally, I continuously improve myself and
-          stay up to date with modern technologies.”
+          stay up to date with modern technologies.U.R”
         </p>
       </div>
     </section>
