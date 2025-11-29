@@ -2,7 +2,8 @@ const projects = [
   {
     id: 1,
     title: "Hotel Web-Site",
-    description: "A modern single-hotel presentation website built with React, CSS and TailwindCSS. Includes elegant UI sections for rooms, amenities, gallery and contact. Backend powered by Node.js, Express.js and MongoDB for dynamic content management.",
+    description:
+      "A modern single-hotel presentation website built with React, CSS and TailwindCSS. Includes elegant UI sections for rooms, amenities, gallery and contact. Backend powered by Node.js, Express.js and MongoDB for dynamic content management.",
     image: "https://i.postimg.cc/d0DHcFMP/Screenshot-2025-11-25-013735.png",
   },
   {
@@ -22,8 +23,17 @@ const projects = [
   {
     id: 4,
     title: "WeatherDate(RR)",
-    description: "A real-time weather forecast application that displays current conditions, temperature, wind, humidity, and a 7-day forecast. Built with React frontend and Node.js + Express API integration.",
+    description:
+      "A real-time weather forecast application that displays current conditions, temperature, wind, humidity, and a 7-day forecast. Built with React frontend and Node.js + Express API integration.",
     image: "https://i.postimg.cc/MTsJbJhY/Screenshot-2025-11-25-224841.png",
+  },
+  {
+    id: 5,
+    title: "Film Explorer App",
+    description: "Browse and explore movies with modern UI.",
+    description:
+      "A modern and interactive movie browsing application built with React. Users can explore trending titles, search movies, and view detailed information.This site Front en stucture using HTML,Tailwind/Css,JavaScript",
+    image: "https://i.postimg.cc/VLfQxPdK/Screenshot-2025-11-29-222138.png",
   },
 ];
 
