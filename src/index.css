@@ -8,8 +8,14 @@
   --radius: 16px;
 }
 
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
   background: var(--bg-dark);
   color: var(--text);
@@ -30,7 +36,7 @@ nav h2 {
   margin: 0;
 }
 
-/* HERO */
+/* HERO (köhnə .hero istifadə edirsə) */
 .hero {
   padding: 100px 40px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -59,40 +65,61 @@ nav h2 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* PROJECTS */
+/* ===================== PROJECTS ===================== */
+
 .projects {
   padding: 70px 40px;
+  
 }
 
-.project-grid {
+/* həm .project-grid, həm .projects-grid üçün eyni stil */
+.project-grid,
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  align-items: stretch; /* bütün kartlar eyni hündürlükdə */
 }
 
-.card {
+/* Kart klassı – həm .card, həm .project-card istifadə olunsun deyə */
+.card,
+.project-card {
   background: var(--bg-light);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;       /* içi dik düzülür */
+  height: 100%;    
+            /* grid hüceyrəsini tam doldurur */
 }
 
-.card:hover {
+.card:hover,
+.project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
 
-.card img {
+/* şəkil: bütün kartlarda eyni hündürlük */
+.card img,
+.project-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.card .content {
+/* kontent hissəsi – buton həmişə aşağıda qalsın deyə flex */
+.card .content,
+.project-card .content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
+/* BUTON */
 .btn {
   display: inline-block;
   margin-top: 10px;
@@ -109,7 +136,8 @@ nav h2 {
   opacity: 0.8;
 }
 
-/* MODAL */
+/* ===================== MODAL ===================== */
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -133,18 +161,18 @@ nav h2 {
   color: var(--text-muted);
   font-size: 20px;
 }
+
+/* ===================== HERO SECTION (yeni) ===================== */
+
 .hero-section {
   height: 60vh;
   display: flex;
   align-items: center;
   padding: 0 50px;
-
   background: linear-gradient(135deg, #1e1e2f 0%, #2a2d45 40%, #3d4167 100%);
   color: white;
-
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
-
   box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -156,6 +184,7 @@ nav h2 {
 .hero-title span {
   background: linear-gradient(90deg, #b26aff, #6ecbff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -203,6 +232,9 @@ nav h2 {
   border-color: white;
   transform: translateY(-3px);
 }
+
+/* FOOTER */
+
 .footer {
   background: #121212;
   padding: 30px;
@@ -219,17 +251,8 @@ nav h2 {
 .footer a:hover {
   text-decoration: underline;
 }
-/* GLOBAL RESPONSIVE FIXES */
 
-* {
-  box-sizing: border-box;
-}
-
-/* Mobil üçün body padding az olsun */
-body {
-  margin: 0;
-  padding: 0;
-}
+/* ===================== RESPONSIVE ===================== */
 
 /* Hero responsive */
 .hero-section {
@@ -251,48 +274,34 @@ body {
   gap: 10px;
 }
 
-/* PROJECT CARD GRID RESPONSIVE */
+/* Projects wrapper (əgər id=projects istifadə edirsənsə) */
 #projects {
   padding: 40px 20px;
 }
 
-.projects-grid {
-  display: grid;
-  gap: 20px;
-}
-
-/* 3 column → 2 column → 1 column */
+/* 3 → 2 → 1 column */
 @media (min-width: 1000px) {
+  .project-grid,
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
+  .project-grid,
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 599px) {
+  .project-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* CARD RESPONSIVE */
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* MODAL RESPONSIVE */
-.modal {
-  width: 90%;
-  max-width: 600px;
-}
-
+/* Modal responsive */
 @media (max-width: 500px) {
   .modal {
     padding: 15px;
@@ -307,7 +316,6 @@ body {
   }
 }
 
-/* FOOTER RESPONSIVE */
 footer {
   text-align: center;
   padding: 20px;

@@ -35,6 +35,13 @@ const projects = [
       "A modern and interactive movie browsing application built with React. Users can explore trending titles, search movies, and view detailed information.This site Front en stucture using HTML,Tailwind/Css,JavaScript",
     image: "https://i.postimg.cc/VLfQxPdK/Screenshot-2025-11-29-222138.png",
   },
+{
+  id: 6,
+  title: "E-commerace Site",
+  description:
+    "A modern and interactive e-commerce web application built with React. Users can browse products, explore categories, search items, and view detailed product information. The platform features a clean UI, smooth animations, and a fully responsive layout for an optimized shopping experience. The frontend is structured using HTML, TailwindCSS, JavaScript, and React, while the backend is powered by Node.js, Express.js, with data stored in MongoDB.",
+  image: "https://i.postimg.cc/m29wMjLb/Screenshot-2025-12-12-001403.png",
+}
 ];
 
 export default projects;
